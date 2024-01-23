@@ -2,20 +2,31 @@
 <?php 
 
 require_once "controllers/usuario.php";
-$controlador = new UsuarioController();
+
 
 //Para hacerlo manual:
 // $controlador->mostrarTodos();
 // $controlador->crear();
 
-//Para hacerlo dinámico:
-if(isset($_GET['action']) && method_exists($controlador, $_GET['action'])){
-    $action = $_GET['action'];
+//Para hacerlo dinámico: CONTROLADOR:
+if(isset($_GET['controller']) && class_exists($_GET['controller'])){
+    $nombre_controlador = $_GET['controller'];
+    $controlador = new $nombre_controlador;
 
-    $controlador->$action();
+    //PARA LA ACCIÓN:
+    if(isset($_GET['action']) && method_exists($controlador, $_GET['action'])){
+        $action = $_GET['action'];
+    
+        $controlador->$action();
+    }else{
+        echo "La página no existe";
+    }
+
 }else{
     echo "La página no existe";
 }
+
+/** EJEMPLO GET: http://localhost/udephp/PHP%20MVC/?controller=UsuarioController&action=crear */
 
 /*
  la función method_exists se utiliza para comprobar si un método específico está definido en una clase o si existe en un objeto dado. 
