@@ -1,7 +1,7 @@
 <h1>Bienvenido</h1>
 <?php 
 
-require_once "controllers/usuario.php";
+require_once "autoload.php";
 
 
 //Para hacerlo manual: ***************************************************************************************
