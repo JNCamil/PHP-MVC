@@ -11,8 +11,15 @@ require_once "controllers/usuario.php";
 
 //Para hacerlo dinámico o llamado controlador frontal:  *******************************************************
 // PARA EL CONTROLADOR:
-if(isset($_GET['controller']) && class_exists($_GET['controller'])){
-    $nombre_controlador = $_GET['controller'];
+if(isset($_GET['controller'])){
+    $nombre_controlador = $_GET['controller']. 'Controller';//Si concateno, no tengo que usar en la URL toda la clase
+}else{
+    echo "La página no existe";
+    exit(); //Para la ejecución
+}
+
+if(isset($nombre_controlador) && class_exists($nombre_controlador)){   
+   
     $controlador = new $nombre_controlador;
 
     // PARA LA ACCIÓN:

@@ -1,6 +1,6 @@
 <?php 
-
-class Usuario{
+require_once "modeloBase.php";
+class Usuario extends ModeloBase{
     public $nombre;
     public $apellidos;
     public $email;
@@ -89,10 +89,7 @@ class Usuario{
 
 
     
-    /************************************************************************ */
-    public function conseguirTodos(){
-        return "Sacando todos los usuarios";
-    }
+   
 }
 
 ?>
