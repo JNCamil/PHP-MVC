@@ -1,12 +1,23 @@
-<?php 
-
+<?php
+require_once "config/database.php";
 //MÉTODOS COMUNES
-class ModeloBase{
-     /************************************************************************ */
-     public function conseguirTodos(){
+class ModeloBase
+{
+    /************************************************************************ */
+    public $db;
+    public function __construct()
+    {
+        $this->db = database::conectar();
+    }
+
+    public function conseguirTodos()
+    {
+        var_dump($this->db);
         return "Sacando todos los usuarios";
     }
-    
+
+
+
 
 
 }

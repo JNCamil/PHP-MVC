@@ -6,7 +6,9 @@ class Usuario extends ModeloBase{
     public $email;
     public $password;
     
-
+    public function __construct(){   //Heredar el constructor del padre para usar db
+        parent::__construct();
+    }
     /**
      * Get the value of password
      */ 
