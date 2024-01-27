@@ -1,6 +1,6 @@
 <?php
 require_once "config/database.php";
-//MÉTODOS COMUNES
+//MÉTODOS COMUNES a todos los modelos
 class ModeloBase
 {
     /************************************************************************ */
@@ -10,10 +10,14 @@ class ModeloBase
         $this->db = database::conectar();
     }
 
-    public function conseguirTodos()
+    public function conseguirTodos($tabla)
     {
-        var_dump($this->db);
-        return "Sacando todos los usuarios";
+        $query=$this->db->prepare("select * from $tabla");
+        $query->execute();
+        $result=$query->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result;
+        //var_dump($result);
     }
 
 

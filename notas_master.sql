@@ -17,8 +17,8 @@ CREATE TABLE `Notas` (
   `usuario_id` int (255) NOT NULL,
   `titulo` varchar(100) NOT NULL,
   `descripcion` varchar(255) NOT NULL,
-  `fecha` date NOT NULL
+  `fecha` date NOT NULL,
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-ALTER TABLE Notas ADD FOREIGN KEY (usuario_id) REFERENCES usuario (id) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE Notas ADD FOREIGN KEY (usuario_id) REFERENCES Usuarios (id) ON DELETE CASCADE ON UPDATE CASCADE;
