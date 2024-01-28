@@ -7,7 +7,7 @@ class ModeloBase
     public $db;
     public function __construct()
     {
-        $this->db = database::conectar();
+        $this->db = Database::conectar();
     }
 
     public function conseguirTodos($tabla)
