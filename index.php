@@ -35,7 +35,7 @@ if(isset($nombre_controlador) && class_exists($nombre_controlador)){
     echo "La página no existe";
 }
 
-/** EJEMPLO USANDO GET: http://localhost/udephp/PHP%20MVC/?controller=UsuarioController&action=crear */
+/** EJEMPLO USANDO GET: http://localhost/udephp/PHP%20MVC/?controller=Usuario&action=crear */
 
 /*
  la función method_exists se utiliza para comprobar si un método específico está definido en una clase o si existe en un objeto dado. 
