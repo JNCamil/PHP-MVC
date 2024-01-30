@@ -15,7 +15,7 @@ if(isset($_GET['controller'])){
     $nombre_controlador = $_GET['controller']. 'Controller';//Si concateno, no tengo que usar en la URL toda la clase
 }else{
     echo "La página no existe";
-    exit(); //Para la ejecución
+    exit(); //hace parar la ejecución
 }
 
 if(isset($nombre_controlador) && class_exists($nombre_controlador)){   
