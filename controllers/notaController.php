@@ -21,6 +21,8 @@ class NotaController{
          //Modelo
          require_once "models/nota.php";
 
+         //Lógica acción controlador
+
          $nota=new Nota();
          $nota->setUsuario_id(1);
          $nota->setTitulo("Nota desde PHP MVC");
