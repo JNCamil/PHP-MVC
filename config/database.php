@@ -2,6 +2,7 @@
 
 class Database
 {
+    //Se crea una función estática para no tener que instanciar
     public static function conectar()
     {
 
