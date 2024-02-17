@@ -9,7 +9,7 @@ class NotaController{
         $nota = new Nota();
        // $nota->setTitulo("Nota número1");
        // $nota->setDescripcion("Hola Mundo php mvc");
-        $notas=$nota->conseguirTodos("notas"); //fetchAll de toda la tabla
+        $notas=$nota->conseguirTodos("notas"); //fetchAll de toda la tabla 'notas'
         
         //Vista
         require_once "views/nota/listar.php";
