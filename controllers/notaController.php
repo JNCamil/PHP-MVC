@@ -2,7 +2,7 @@
 
 class NotaController{
     public function listar(){
-        //Modelo
+        //Modelo.
         require_once "models/nota.php";
 
         //Lógica acción controlador
