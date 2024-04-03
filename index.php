@@ -4,12 +4,12 @@
 require_once "autoload.php";
 
 
-//Para hacerlo manual: ***************************************************************************************
+//Para HACERLO MANUAL: ***************************************************************************************
 // $controlador = new UsuarioController();
 // $controlador->mostrarTodos();
 // $controlador->crear();
 
-//Para hacerlo dinámico o llamado controlador frontal:  *******************************************************
+//Para hacerlo DINÁMICO O LLAMADO CONTROLADOR FRONTAL:  *******************************************************
 // PARA EL CONTROLADOR:
 if(isset($_GET['controller'])){
     $nombre_controlador = $_GET['controller']. 'Controller';//Si concateno, no tengo que usar en la URL toda la clase
